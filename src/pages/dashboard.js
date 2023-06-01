@@ -64,7 +64,7 @@ const Dashboard = () => {
             </Head>
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div className="w-3/4 mx-auto bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <form class="flex justify-center" onSubmit={handleSearch}>
                             <input
                                 onChange={(e) => {
@@ -79,9 +79,12 @@ const Dashboard = () => {
                         </form>
                     </div>
                     {/* filter Section */}
-                    <div className='mt-4 flex justify-center'>
-                        {categories ? (categories.map(category => <button type='button' onClick={() => handleSearchCategory({ category })} className="bg-primary text-black hover:bg-cyan-500 text-lg font-medium mr-2 px-3 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">{category}</button>
-                        )) : (<></>)}
+                    <div className=' md:flex mt-4  justify-center '>
+                        {categories ? (categories.map(category => 
+                        <button type='button' 
+                        onClick={() => handleSearchCategory({ category })} 
+                        className="bg-primary text-black hover:bg-cyan-500 text-lg font-medium m-2 px-3 py- rounded-full dark:bg-gray-700 dark:text-gray-300">{category}</button>
+                        )) : (<span>Loading</span>)}
                     </div>
                 </div>
             </div>
@@ -91,7 +94,7 @@ const Dashboard = () => {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-10">
                     {/* card item */}
-                    {news ? (news.map((article, key) => <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                    {news ? (news.map((article, key) => <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg">
                         <img className="w-full" src={article.urlToImage} alt={key} />
                         <div className="px-6 py-4">
                             <Link href={article.url} el="noopener noreferrer" target="_blank"><div class="font-bold text-xl mb-2">{article.title?.substring(0, 70).concat('...')}</div></Link>

@@ -12,7 +12,7 @@ export default function Home() {
             </Head>
 
             <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-                <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <div className=" fixed top-0 right-0 px-6 py-4 ">
                     {user ? (
                         <Link
                             href="/dashboard"
@@ -36,18 +36,15 @@ export default function Home() {
                     )}
                 </div>
 
-                <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                    <div className="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                      <div className='text-4xl  text-cyan-500 font-bold' > The Heroic Hub of Knowledge and Inspiration!</div>
-                      
+                <div className="flex max-w-6xl mx-4 items-center justify-center">
+                    <div className='text-4xl text-cyan-500 font-bold' >
+                        The Heroic Hub of Knowledge and Inspiration!
                     </div>
-
-                    
                 </div>
-                
+
             </div>
 
-            
+
         </>
     )
 }
